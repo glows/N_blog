@@ -20,4 +20,9 @@ module.exports = function (app) {
     app.use('/signout', require('./signout'));
     app.use('/users', require('./users'))
     app.use('/posts', require('./posts'));
+    app.use(function(req, res){
+    if(!res.headerSent){
+      res.render('404');
+    }
+  });
   };

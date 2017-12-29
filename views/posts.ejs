@@ -1,8 +1,7 @@
 <%- include('header') %>
 
-<div class="web this">
-  <div class="four wide column"></div>
-  <h1>这是主页</h1>
-</div>
+<% posts.forEach(function (post) { %>
+  <%- include('components/post-content', { post: post }) %>
+<% }) %>
 
 <%- include('footer') %>
